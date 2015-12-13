@@ -30,21 +30,20 @@ We have 68 variables.
 
 Decoding the abbreviated variables names can be accomplished using this key prepared by a careful study of the features_info.txt file of the original data set:
 
-``
-•t = time 
-•f = frequency
-•Body = body
-•Gravity = gravity
-•Acc = accelerometer
-•Gyro = gyroscope
-•Jerk = jerk, derived from body measurements
-•X = x-axis
-•Y = y-axis
-•Z = z-axis
-•Mag = magnitude
-•Mean = mean value
-•Std = standard deviation
-``
+•t = time \n
+•f = frequency \n
+•Body = body \n
+•Gravity = gravity \n
+•Acc = accelerometer \n
+•Gyro = gyroscope \n
+•Jerk = jerk, derived from body measurements \n
+•X = x-axis \n
+•Y = y-axis \n
+•Z = z-axis \n
+•Mag = magnitude \n
+•Mean = mean value \n
+•Std = standard deviation \n
+
 
 Further explanations of the variable naming scheme can be found in the features_info.txt file of the original data set.
 
@@ -56,9 +55,9 @@ Further explanations of the variable naming scheme can be found in the features_
 
 From the README.txt provided with the original raw data set:
 
-``
-•Body acceleration = total acceleration - gravity
-•Acceleration: standard gravity units 'g'
-•Gyroscope: radians/second
-•All features: normalized and bounded within [-1,1]
-``
+
+•Body acceleration = total acceleration - gravity \n
+•Acceleration: standard gravity units 'g' \n
+•Gyroscope: radians/second \n
+•All features: normalized and bounded within [-1,1] \n
+
