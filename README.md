@@ -2,7 +2,7 @@ Getting and Cleaning Data.
 ==========================
 
 This is the Assessment Project for the Course Getting and Cleaning Data.
----------------------------------------------------------------------------------------
+
 
 Description of the script run_analysis.R
 ==========================================

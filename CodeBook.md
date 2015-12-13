@@ -1,7 +1,8 @@
-GettingAndCleaningDataProject
+Getting and Cleaning Data.
+==========================
 
 Code Book
-
+==========
 
 These are our variables
 
@@ -28,7 +29,9 @@ These are our variables
 We have 68 variables.
 
 Decoding the abbreviated variables names can be accomplished using this key prepared by a careful study of the features_info.txt file of the original data set:
-•t = time
+
+``
+•t = time 
 •f = frequency
 •Body = body
 •Gravity = gravity
@@ -41,21 +44,21 @@ Decoding the abbreviated variables names can be accomplished using this key prep
 •Mag = magnitude
 •Mean = mean value
 •Std = standard deviation
-
+``
 
 Further explanations of the variable naming scheme can be found in the features_info.txt file of the original data set.
 
 
 
-
-
  
 "Features" - values and units
-
+=============================
 
 From the README.txt provided with the original raw data set:
+
+``
 •Body acceleration = total acceleration - gravity
 •Acceleration: standard gravity units 'g'
 •Gyroscope: radians/second
 •All features: normalized and bounded within [-1,1]
-
+``
