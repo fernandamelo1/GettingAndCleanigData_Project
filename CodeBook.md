@@ -19,7 +19,7 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These are our variables
 
 ```
- [1] "Activity Id"                 "Subject Id"                  "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"          
+ [1] "Activity_Name"               "Subject_Id"                  "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"          
  [5] "tBodyAcc-mean()-Z"           "tBodyAcc-std()-X"            "tBodyAcc-std()-Y"            "tBodyAcc-std()-Z"           
  [9] "tGravityAcc-mean()-X"        "tGravityAcc-mean()-Y"        "tGravityAcc-mean()-Z"        "tGravityAcc-std()-X"        
 [13] "tGravityAcc-std()-Y"         "tGravityAcc-std()-Z"         "tBodyAccJerk-mean()-X"       "tBodyAccJerk-mean()-Y"      
