@@ -1,8 +1,8 @@
 Getting and Cleaning Data.
-==========================
+--------------------------
 
 Code Book
-==========
+---------
 
 These are our variables
 
@@ -51,7 +51,7 @@ Further explanations of the variable naming scheme can be found in the features_
 
  
 "Features" - values and units
-=============================
+-----------------------------
 
 From the README.txt provided with the original raw data set:
 
