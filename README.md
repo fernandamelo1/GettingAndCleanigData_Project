@@ -74,19 +74,19 @@ subject_test <- read.table(file.path(path_dataset,"test","subject_test.txt"))
 ```
  
 
-create 'x' data set
+Create 'x' data set
 
 ```
 x_data <- rbind(x_train, x_test) 
 ```
 
-create 'y' data set 
+Create 'y' data set 
 
 ```
 y_data <- rbind(y_train, y_test) 
 ```
 
-create 'subject' data set 
+Create 'subject' data set 
 
 ```
 subject_data <- rbind(subject_train, subject_test) 
@@ -170,9 +170,9 @@ averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 
 Create the tidy data
 --------------------
 
-```{r}
+```
 write.table(averages_data, "tidy_data.txt", row.name=FALSE) 
-```{r}
+```
 
 
 
