@@ -32,7 +32,7 @@ Download Data Set
 ------------------
 We download the dataset from the url given above. We will extract with the library unzip
 
-```{r}
+```
 path<-getwd()
 url <- "https://d396qusza40orc.cloudataframeront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 f <- 'ProjectData.zip'
@@ -53,7 +53,7 @@ Directory of Dataset
 --------------------
 Create a variable called `path_dataset` where are our data.
 
-```{r}
+```
 path_dataset <- file.path(path, "UCI HAR Dataset")
 ```
 
@@ -62,7 +62,7 @@ path_dataset <- file.path(path, "UCI HAR Dataset")
 ------------------------------------------------------------
 Let's read the train and test datasets and merge using `rbind`:
 
-```{r}
+```
 x_train <- read.table(file.path(path_dataset,"train","X_train.txt"))
 y_train <- read.table(file.path(path_dataset,"train","y_train.txt"))
 subject_train <- read.table(file.path(path_dataset,"train","subject_train.txt"))
@@ -71,79 +71,89 @@ subject_train <- read.table(file.path(path_dataset,"train","subject_train.txt"))
 x_test <- read.table(file.path(path_dataset,"test","X_test.txt"))
 y_test <- read.table(file.path(path_dataset,"test","y_test.txt"))
 subject_test <- read.table(file.path(path_dataset,"test","subject_test.txt"))
-```{r}
+```
  
 
 create 'x' data set
-```{r}
+
+```
 x_data <- rbind(x_train, x_test) 
-```{r}
+```
 
 create 'y' data set 
-```{r}
+
+```
 y_data <- rbind(y_train, y_test) 
-```{r}
+```
 
 create 'subject' data set 
-```{r}
+
+```
 subject_data <- rbind(subject_train, subject_test) 
-```{r}
+```
 
   
 2. Extract only the measurements on the mean and standard deviation for each measurement 
 -----------------------------------------------------------------------------------------
 Read features.txt who contain all the features (measurements)
 
-```{r}
+```
 features <- read.table(file.path(path_dataset,"features.txt")) 
-```{r}
+```
 
 Get only columns with mean() or std() in their names 
- ```{r} 
- mean_and_std_features <- grep("-(mean|std)\\(\\)", features[, 2]) 
-```{r}
 
- Subset the desired columns 
- ```{r} 
- x_data <- x_data[, mean_and_std_features] 
-```{r}
+```
+mean_and_std_features <- grep("-(mean|std)\\(\\)", features[, 2]) 
+```
 
- correct the column names 
- ```{r}
- names(x_data) <- features[mean_and_std_features, 2] 
-```{r}
+Subset the desired columns 
+ 
+``` 
+x_data <- x_data[, mean_and_std_features] 
+```
+
+Correct the column names 
+ 
+ ```
+names(x_data) <- features[mean_and_std_features, 2] 
+```
 
 
 3.Use descriptive activity names to name the activities in the data set  
 -------------------------------------------------------------------------
 
-```{r}
+```
 activities <- read.table(file.path(path_dataset,"activity_labels.txt")) 
-```{r}
+```
 
 Update values with correct activity names
-```{r}
+
+```
 y_data[, 1] <- activities[y_data[, 1], 2] 
-```{r}
+```
 
 Correct column name
-```{r}
+
+```
 names(y_data) <- "activity" 
-```{r}
+```
 
 
 4. Appropriately label the data set with descriptive variable names. 
 ---------------------------------------------------------------------
 
 Correct column name 
-```{r}
-names(subject_data) <- "subject" 
-```{r}
 
-Bind all the data in a single data set 
-```{r}
+```
+names(subject_data) <- "subject" 
+```
+
+Bind all the data in a single data set
+
+```
 all_data <- cbind(x_data, y_data, subject_data) 
-```{r}
+```
 
 
 
@@ -152,9 +162,10 @@ all_data <- cbind(x_data, y_data, subject_data)
 -----------------------------------------------------------------------------------------------------------------------
 
 66 <- 68 columns but exclude last two (activity & subject)
- ```{r}
+
+ ```
 averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66])) 
-```{r}
+```
 
 Create the tidy data
 --------------------
