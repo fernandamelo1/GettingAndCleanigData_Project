@@ -17,7 +17,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 These are our variables
 
 ```
- [1] "Activity_Name"               "Subject_Id"                  "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"          
+ [1] "subject"                     "activity"                    "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"          
  [5] "tBodyAcc-mean()-Z"           "tBodyAcc-std()-X"            "tBodyAcc-std()-Y"            "tBodyAcc-std()-Z"           
  [9] "tGravityAcc-mean()-X"        "tGravityAcc-mean()-Y"        "tGravityAcc-mean()-Z"        "tGravityAcc-std()-X"        
 [13] "tGravityAcc-std()-Y"         "tGravityAcc-std()-Z"         "tBodyAccJerk-mean()-X"       "tBodyAccJerk-mean()-Y"      
